@@ -1,0 +1,3 @@
+alias ll='ls -alGpF'
+alias ..='cd ..'
+alias vi='vim'
