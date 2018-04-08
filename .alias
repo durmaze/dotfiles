@@ -1,3 +1,4 @@
-alias ll='ls -alGpF'
+alias l='ls -alGpF'
 alias ..='cd ..'
-alias vi='vim'
+alias v='vim'
+alias c='cat'
