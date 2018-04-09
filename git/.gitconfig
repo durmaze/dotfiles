@@ -3,3 +3,5 @@
 	email = durmaze@gmail.com
 	username = durmaze
 	signingkey = 6AA7C83CFBFAF091
+[core]
+	excludesfile = /Users/erkand/.gitignore

@@ -1,0 +1,10 @@
+alias l='ls -alGpF'
+alias ..='cd ..'
+alias v='vim'
+
+function c() {
+	cd $1;
+	ls;
+}
+
+alias cd="c"
