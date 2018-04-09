@@ -1,0 +1,1 @@
+add brew-installed zsh to /etc/shells, then chsh -s $(which zsh)
