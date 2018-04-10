@@ -1,5 +1,4 @@
 [[ -f ~/.alias ]] && source ~/.alias
-[[ -f ~/.inputrc ]] && source ~/.inputrc
 
 export GOPATH="$HOME/go"
 export PATH="$HOME/.cargo/bin:$GOPATH/bin:$PATH"
