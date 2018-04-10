@@ -2,10 +2,6 @@
 
 export GOPATH="$HOME/go"
 export PATH="$HOME/.cargo/bin:$GOPATH/bin:$PATH"
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
-
-set -o vi
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
@@ -30,20 +26,11 @@ echo -e "\033]6;1;bg;blue;brightness;52\a"
 # run tmux if exists
 [ -z $TMUX ] && exec tmux
 
-# oh-my-zsh config
-export ZSH=/Users/erkand/.oh-my-zsh
-
-source $ZSH/oh-my-zsh.sh
-
 # Vars
 	HISTFILE=~/.zsh_history
 	SAVEHIST=1000 
 	setopt inc_append_history # To save every command before it is executed 
 	setopt share_history # setopt inc_append_history
-
-
-
-# source ~/dotfiles/zsh/plugins/fixls.zsh
 
 # For vim mappings:(ctrl+s, ctrl+q) 
 	stty -ixon
@@ -51,9 +38,6 @@ source $ZSH/oh-my-zsh.sh
 # source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
 # source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
 # source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
-# source ~/dotfiles/zsh/plugins/vi-mode.plugin.zsh
-# source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh/keybindings.sh
 
 # Fix for arrow-key searching
@@ -71,3 +55,12 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 fi
 
 source ~/dotfiles/zsh/prompt.sh
+
+# oh-my-zsh config
+export ZSH=/Users/erkand/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# oh-my-zsh plugins
+plugins=(git vi-mode zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+
+
