@@ -61,6 +61,6 @@ export ZSH=/Users/erkand/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # oh-my-zsh plugins
-plugins=(git vi-mode docker zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git vi-mode docker vagrant zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
 
