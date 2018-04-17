@@ -28,7 +28,8 @@ echo -e "\033]6;1;bg;blue;brightness;52\a"
 
 # Vars
 	HISTFILE=~/.zsh_history
-	SAVEHIST=1000 
+	HISTSIZE=1000000
+	SAVEHIST=1000000
 	setopt inc_append_history # To save every command before it is executed 
 	setopt share_history # setopt inc_append_history
 
@@ -64,3 +65,9 @@ source $ZSH/oh-my-zsh.sh
 plugins=(git vi-mode docker vagrant zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
 
+# ===================
+#    THIRD PARTY
+# ===================
+# brew install jump
+# https://github.com/gsamokovarov/jump
+eval "$(jump shell)"
