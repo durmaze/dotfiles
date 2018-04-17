@@ -10,6 +10,7 @@
 
 	Plug '/usr/local/opt/fzf'
 	Plug 'junegunn/fzf.vim'
+	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 	call plug#end()
 
@@ -89,6 +90,13 @@
 			\	execute 'normal! g`"zvzz' |
 			\ endif
 	augroup END
+	
+" ==================== NerdTree ====================
+" For toggling
+noremap <Leader>n :NERDTreeToggle<cr>
+noremap <Leader>f :NERDTreeFind<cr>
+
+let NERDTreeShowHidden=1
 
 " Future stuff
 	"Swap line
