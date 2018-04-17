@@ -20,7 +20,6 @@
 
 " General Vim settings
 	set encoding=utf8
-	set guifont=DroidSansMono_Nerd_Font:h11
 
 	syntax on
 	let mapleader=","
