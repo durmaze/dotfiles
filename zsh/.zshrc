@@ -1,5 +1,7 @@
 [[ -f ~/.alias ]] && source ~/.alias
 
+export LANG=en_US.UTF-8
+
 export GOPATH="$HOME/go"
 export PATH="$HOME/.cargo/bin:$GOPATH/bin:$PATH"
 
