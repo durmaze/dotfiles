@@ -11,6 +11,8 @@
 	Plug '/usr/local/opt/fzf'
 	Plug 'junegunn/fzf.vim'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-repeat'
 
 	call plug#end()
 
