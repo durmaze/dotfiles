@@ -5,3 +5,9 @@
 	signingkey = 6AA7C83CFBFAF091
 [core]
 	excludesfile = /Users/erkand/.gitignore
+[alias]
+	st = status -sb
+	ci = commit
+	pr = pull --rebase
+[color]
+	ui = auto
