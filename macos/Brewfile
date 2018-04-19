@@ -9,7 +9,6 @@ brew "bash-completion"
 brew "curl"
 brew "dict"
 brew "docker-completion"
-brew "docker-machine", link: false
 brew "fd"
 brew "ffmpeg"
 brew "fzf"
