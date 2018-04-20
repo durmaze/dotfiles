@@ -1,3 +1,4 @@
+IMPORTANT NOTE: SYMLINKS TO DIRECTORY ONLY WORKED IF FULL PATH IS GIVEN
 add brew-installed zsh to /etc/shells, then chsh -s $(which zsh)
 install oh-my-zsh => sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -16,6 +17,5 @@ plugins=(zsh-syntax-highlighting)
 
 copy between terminal and OSX
 
-use ftplugin for vim
-
-add vim-airline or powerline
+install needs to be invoked after vim-go installation, otherwise gometalinter uses govet instead of go vet.
+gometalinter --install
