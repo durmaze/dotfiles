@@ -14,7 +14,8 @@
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-repeat'
 	Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
-	
+	Plug 'itchyny/lightline.vim'
+
 	" required for :GoDecls
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'ryanoasis/vim-devicons'
