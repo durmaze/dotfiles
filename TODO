@@ -15,8 +15,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 plugins=(zsh-syntax-highlighting)
 
 
-copy between terminal and OSX
-
 install needs to be invoked after vim-go installation, otherwise gometalinter uses govet instead of go vet.
 gometalinter --install
 
@@ -24,3 +22,9 @@ gometalinter --install
 install gcalcli 
 pip install gcalcli => make it versionable, e.g. requirements.txt file.
 try using makefile
+
+enable custom preferences directory for iterm2. add it to the installation script
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
