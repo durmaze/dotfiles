@@ -16,6 +16,8 @@
 	Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 	Plug 'itchyny/lightline.vim'
 
+	Plug 'christoomey/vim-tmux-navigator'
+
 	" required for :GoDecls
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'ryanoasis/vim-devicons'
@@ -33,6 +35,10 @@
 	set dir=/tmp/
 	set relativenumber
 	set number
+
+	" http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
+	set clipboard^=unnamed
+	set clipboard^=unnamedplus
 	
 	" autowrite when :make like tools (e.g. :GoBuild) are called
 	set autowrite
@@ -40,7 +46,7 @@
 	set cursorline
 	hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 
-	set hlsearch
+	set hlsearch " Highlight found searches
 	nnoremap <C-l> :nohl<CR><C-l>:echo "Search Cleared"<CR>
 	nnoremap <C-c> :set norelativenumber<CR>:set nonumber<CR>:echo "Line numbers turned off."<CR>
 	nnoremap <C-n> :set relativenumber<CR>:set number<CR>:echo "Line numbers turned on."<CR>
@@ -53,6 +59,14 @@
 	nnoremap J G
 	nnoremap K gg
 	
+	vnoremap H 0
+	vnoremap L $
+	vnoremap J G
+	vnoremap K gg
+	
+	" map jj to ESC in order to stay in home row for quiting insert mode
+	inoremap jj <Esc>
+
 	" move one line up/down on OSX ==> http://vim.wikia.com/wiki/Moving_lines_up_or_down
 	" <ALT+j> ==> ∆ 
 	" <ALT+k> ==> ˚
@@ -81,8 +95,8 @@
 	set listchars=tab:\|\
 	nnoremap <leader><tab> :set list!<cr>
 	set pastetoggle=<F2>
-	set mouse=a
-	set incsearch
+	set mouse=a "Enable mouse mode
+	set incsearch 					" Shows the match while typing
 
 " Language-specific 
 	" General

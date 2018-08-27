@@ -19,3 +19,8 @@ copy between terminal and OSX
 
 install needs to be invoked after vim-go installation, otherwise gometalinter uses govet instead of go vet.
 gometalinter --install
+
+
+install gcalcli 
+pip install gcalcli => make it versionable, e.g. requirements.txt file.
+try using makefile

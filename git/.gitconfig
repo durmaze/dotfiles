@@ -5,9 +5,13 @@
 	signingkey = 6AA7C83CFBFAF091
 [core]
 	excludesfile = /Users/erkand/.gitignore
+	commentchar = @
+	editor = $(which vim)
 [alias]
 	st = status -sb
 	ci = commit
+	co = checkout
 	pr = pull --rebase
+	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [color]
 	ui = auto

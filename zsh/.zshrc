@@ -2,7 +2,12 @@
 
 export LANG=en_US.UTF-8
 
-export GOPATH="$HOME/go"
+# required for gcalcli (python)
+export LC_ALL=en_US.UTF-8
+
+export GOROOT="/usr/local/opt/go/libexec"
+export PATH="$PATH:$GOROOT/bin"
+export GOPATH="$HOME/workspace/go"
 export PATH="$HOME/.cargo/bin:$GOPATH/bin:$PATH"
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
@@ -64,7 +69,7 @@ export ZSH=/Users/erkand/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # oh-my-zsh plugins
-plugins=(git vi-mode docker vagrant zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git vi-mode docker vagrant golang zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
 
 # ===================

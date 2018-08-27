@@ -1,6 +1,18 @@
 alias l='ls -alGpF'
 alias ..='cd ..'
 alias v='vim'
+alias nv="paste <(curl -s www.namazvakti.com | pup 'td[class=pText] text{}') <(curl -s www.namazvakti.com | pup 'td[class=pTime] text{}')"
+alias nb=newsboat
+
+function gcalendar() {
+	if [ "$#" -eq 0 ]; 	then 
+		gcalcli agenda
+	else 
+		gcalcli $@
+	fi
+}
+
+alias gcal="gcalendar"
 
 function c() {
 	cd $1;
