@@ -1,9 +1,12 @@
+# vim: syntax=ruby filetype=ruby
+
 tap "homebrew/core"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "caskroom/fonts"
 tap "caskroom/versions"
 tap "caskroom/cask"
+
 brew "ansible"
 brew "bash-completion"
 brew "csvkit"
@@ -17,6 +20,7 @@ brew "gnupg"
 brew "go"
 brew "gopass"
 brew "highlight"
+brew "htop", args: ["with-ncurses"] 
 brew "httpie"
 brew "jq"
 brew "jump"
@@ -24,6 +28,7 @@ brew "gron"
 brew "kubernetes-cli"
 brew "neomutt"
 brew "newsboat"
+brew "ncurses"
 brew "offlineimap"
 brew "dialog"
 brew "nmap"
