@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# Install all the necessary brew packages, especially `stow`.
-./install_debian_packages.sh
 
 brew bundle --file=macos/Brewfile
 
