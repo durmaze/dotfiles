@@ -1,3 +1,7 @@
+ohmyzsh
+Stow zsh ettigimizde ohmyzsh eziyor .zshrc'yi. Setup ile dotfiles'I ayristirmak lazim. 
+
+
 IMPORTANT NOTE: SYMLINKS TO DIRECTORY ONLY WORKED IF FULL PATH IS GIVEN
 add brew-installed zsh to /etc/shells, then chsh -s $(which zsh)
 install oh-my-zsh => sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

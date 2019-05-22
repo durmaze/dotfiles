@@ -1,3 +1,6 @@
+" General variables
+	let g:os = substitute(system('uname'), '\n', '', '')
+
 " Install vim-plug if it is not installed
 	if empty(glob('~/.vim/autoload/plug.vim'))
 	  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -67,17 +70,28 @@
 	" map jj to ESC in order to stay in home row for quiting insert mode
 	inoremap jj <Esc>
 
-	" move one line up/down on OSX ==> http://vim.wikia.com/wiki/Moving_lines_up_or_down
-	" <ALT+j> ==> ∆ 
-	" <ALT+k> ==> ˚
-	nnoremap ∆ :m .+1<CR>==
-	nnoremap ˚ :m .-2<CR>==
-	inoremap ∆ <Esc>:m .+1<CR>==gi
-	inoremap ˚ <Esc>:m .-2<CR>==gi
-	vnoremap ∆ :m '>+1<CR>gv=gv
-	vnoremap ˚ :m '<-2<CR>gv=gv
-
-	map <tab> %
+	" move one line up/down
+	" http://vim.fandom.com/wiki/Moving_lines_up_or_down 
+	if g:os == "Darwin"
+		" on OSX ==> https://stackoverflow.com/questions/7501092/can-i-map-alt-key-in-vim/15399297#15399297
+		" <ALT+j> ==> ∆ 
+		" <ALT+k> ==> ˚
+		nnoremap ∆ :m .+1<CR>==
+		nnoremap ˚ :m .-2<CR>==
+		inoremap ∆ <Esc>:m .+1<CR>==gi
+		inoremap ˚ <Esc>:m .-2<CR>==gi
+		vnoremap ∆ :m '>+1<CR>gv=gv
+		vnoremap ˚ :m '<-2<CR>gv=gv
+	elseif g:os == "Linux"
+		nnoremap <A-j> :m .+1<CR>==
+		nnoremap <A-k> :m .-2<CR>==
+		inoremap <A-j> <Esc>:m .+1<CR>==gi
+		inoremap <A-k> <Esc>:m .-2<CR>==gi
+		vnoremap <A-j> :m '>+1<CR>gv=gv
+		vnoremap <A-k> :m '<-2<CR>gv=gv
+	endif
+	
+    	map <tab> %
 
 	" Faster split switching
 	map <C-j> <C-W>j
