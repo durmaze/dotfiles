@@ -1,0 +1,7 @@
+tmux
+go
+go-tools
+yay
+sxhkd
+vifm
+htop

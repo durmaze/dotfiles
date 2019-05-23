@@ -1,0 +1,5 @@
+export EDITOR="vim"
+export TERMINAL="termite"
+export BROWSER="google-chrome"
+export READER="zathura"
+export FILE="vifm"

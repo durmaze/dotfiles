@@ -33,6 +33,11 @@
 	syntax on
 	let mapleader=","
 	set autoindent
+	
+	" to toggle paste mode due to autoindent
+	" https://unix.stackexchange.com/questions/199203/why-does-vim-indent-pasted-code-incorrectly
+	set pastetoggle=<F2>
+
 	set tabstop=4
 	set shiftwidth=4
 	set dir=/tmp/
@@ -108,7 +113,6 @@
 
 	set listchars=tab:\|\
 	nnoremap <leader><tab> :set list!<cr>
-	set pastetoggle=<F2>
 	set mouse=a "Enable mouse mode
 	set incsearch 					" Shows the match while typing
 

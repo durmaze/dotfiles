@@ -7,7 +7,7 @@ allow_bold = true
 #dynamic_title = true
 #urgent_on_bell = true
 clickable_url = true
-font = DejaVu Sans Mono Book 10
+# font = DejaVu Sans Mono Book 10
 scrollback_lines = 10000
 #search_wrap = true
 icon_name = terminal
@@ -15,6 +15,7 @@ clickable_url = true
 #cursor_blink = system
 #cursor_shape = block
 #filter_unmatched_urls = true
+fullscreen = true
 
 font = UbuntuMono Nerd Font 13
 

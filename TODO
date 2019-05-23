@@ -1,6 +1,9 @@
 ohmyzsh
 Stow zsh ettigimizde ohmyzsh eziyor .zshrc'yi. Setup ile dotfiles'I ayristirmak lazim. 
 
+.xprofilec
+BURDA ALTTAKI SATIRIN EKLENMESI ISI VAR
+sxhkd &	# Bind keys
 
 IMPORTANT NOTE: SYMLINKS TO DIRECTORY ONLY WORKED IF FULL PATH IS GIVEN
 add brew-installed zsh to /etc/shells, then chsh -s $(which zsh)

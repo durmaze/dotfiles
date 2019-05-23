@@ -1,7 +1,8 @@
-pacman -S --needed - < pkglist.txt
+# install pacman packages
+sudo pacman -S --needed - < pkglist.txt
 
 # install tmux plugin manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+[[ ! -d ~/.tmux/plugins/tpm ]] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# install gcalcli (AUR)
-# yaourt -S gcalcli
+# install AUR packages
+yay -S --needed --noconfirm - < pkglist-aur.txt
