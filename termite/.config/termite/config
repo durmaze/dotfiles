@@ -22,33 +22,69 @@ font = UbuntuMono Nerd Font 13
 # $BROWSER is used by default if set, with xdg-open as a fallback
 browser = lynx
 
-
-# *************************
+# MANJARO COLORS
 [colors]
-foreground = #c0c5ce
-foreground_bold = #eee8d5
-cursor = #c0c5ce
-# background transparency (requires a compositor)
-background = rgba(29, 35, 48, 0.95)
+background = rgba(0,0,0,0.95)
+foreground = #d8d8d8
+foreground_bold = #d8d8d8
 
-# if unset, will reverse foreground and background
-#highlight = #839496
+# Black, Gray, Silver, White
+color0 = #292f34
+color7 = #d8d8d8
+color8 = #0a6355
+color15 = #f8f8f8
 
-# colors from color0 to color254 can be set
-color0 = #1D2330
-color1 = #645377
-color2 = #AD69AF
-color3 = #B1B5C8
-color4 = #92969d
-color5 = #645377
-color6 = #AD69AF
-color7 = #B1B5C8
-color8 = #4B5665
-color9 = #84598D
-color10 = #7B8290
-color11 = #d1d7e1
-color12 = #4B5665
-color13 = #84598D
-color14 = #7B8290
-color15 = #d1d7e1
+# Red
+color1 = #ab4642
+color9 = #ab4642
+
+# Green
+color2 = #99cc99
+color10 = #99cc99
+
+# Yellow
+color3 = #f7ca88
+color11 = #f7ca88
+
+# Blue
+color4 = #006a78
+color12 = #006a78
+
+# Purple
+color5 = #b48ead
+color13 = #b48ead
+
+# Teal
+color6 = #1abb9b
+color14 = #1abb9b
+
+# OCEANIC COLORS
+# *************************
+# [colors]
+# foreground = #c0c5ce
+# foreground_bold = #eee8d5
+# cursor = #c0c5ce
+# # background transparency (requires a compositor)
+# background = rgba(29, 35, 48, 0.95)
+# 
+# # if unset, will reverse foreground and background
+# #highlight = #839496
+# 
+# # colors from color0 to color254 can be set
+# color0 = #1D2330
+# color1 = #645377
+# color2 = #AD69AF
+# color3 = #B1B5C8
+# color4 = #92969d
+# color5 = #645377
+# color6 = #AD69AF
+# color7 = #B1B5C8
+# color8 = #4B5665
+# color9 = #84598D
+# color10 = #7B8290
+# color11 = #d1d7e1
+# color12 = #4B5665
+# color13 = #84598D
+# color14 = #7B8290
+# color15 = #d1d7e1
 
