@@ -5,3 +5,6 @@ yay
 sxhkd
 vifm
 htop
+gopass
+zathura
+zathura-pdf-mupdf
