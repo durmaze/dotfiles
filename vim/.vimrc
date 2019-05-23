@@ -25,6 +25,9 @@
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'ryanoasis/vim-devicons'
 
+	" sxhkd syntax highlighting
+	Plug 'kovetskiy/sxhkd-vim'
+
 	call plug#end()
 
 " General Vim settings
