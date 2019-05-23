@@ -1,0 +1,2 @@
+# backup for crontabs. needs to be added via crontab -e command
+*/20 * * * 1-5 /usr/bin/newsboat -x reload

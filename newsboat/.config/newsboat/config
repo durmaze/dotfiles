@@ -1,5 +1,6 @@
-#auto-reload yes
-reload-time 30 # re-check feeds every 30m
+# Reloading is done via crontab. Disable auto-reload here
+# auto-reload yes
+# reload-time 30 # re-check feeds every 30m
 notify-beep yes
 confirm-exit yes
 
