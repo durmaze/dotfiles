@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # install pacman packages
 sudo pacman -S --needed - < pkglist.txt
 

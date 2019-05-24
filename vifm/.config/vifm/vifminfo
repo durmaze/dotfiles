@@ -1,0 +1,125 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/home/erkan/
+	..
+1558578975
+'b
+	/home/erkan/bin/
+	..
+1558578975
+'h
+	/home/erkan/
+	..
+1558578975
+'z
+	/home/erkan/.config/vifm
+	..
+1558578975
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/erkan
+	Desktop
+1
+d/home/erkan/Desktop
+	..
+0
+d/home/erkan
+	Documents
+2
+d/home/erkan/Documents
+	..
+0
+d/home/erkan
+	Pictures
+5
+d/home/erkan/Pictures
+	..
+0
+d/home/erkan
+	go
+11
+d/home/erkan/go
+	..
+0
+d/home/erkan
+	dotfiles
+10
+d/home/erkan/dotfiles
+	bash
+1
+d/home/erkan
+	dotfiles
+10
+d/home
+	erkan
+1
+d/home/erkan
+	Desktop
+1
+d/home/erkan/Desktop
+	..
+0
+d/home/erkan
+	Downloads
+3
+d/home/erkan/Downloads
+	..
+0
+d/home/erkan
+	Downloads
+3
+d
+
+# Right window history (oldest to newest):
+D/home/erkan
+	..
+0
+D/home
+	..
+0
+D/
+	home
+4
+D
+
+# Command line history (oldest to newest):
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/erkan/.local/share/vifm/Trash/000_urls
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/erkan/.local/share/vifm/Trash/000_urls
+	/home/erkan/urls
+
+# State:
+f
+i1
+[.1
+[F
+F
+I1
+].1
+]F
+s0
