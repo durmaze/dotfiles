@@ -9,3 +9,4 @@ gopass
 zathura
 zathura-pdf-mupdf
 newsboat
+light-locker

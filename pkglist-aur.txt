@@ -1,2 +1,3 @@
 gcalcli
 pup-git
+lightdm-webkit-theme-aether
