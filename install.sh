@@ -13,6 +13,7 @@ stow neofetch
 stow newsboat
 stow ranger
 stow sxhkd
+stow sxiv
 stow termite
 stow tmux
 stow vifm
