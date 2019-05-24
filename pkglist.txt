@@ -4,6 +4,7 @@ go-tools
 yay
 sxhkd
 vifm
+python-ueberzug
 htop
 gopass
 zathura
