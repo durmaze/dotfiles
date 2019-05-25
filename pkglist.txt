@@ -1,4 +1,6 @@
 tmux
+fd
+fzf
 go
 go-tools
 yay

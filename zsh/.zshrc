@@ -34,6 +34,12 @@ SAVEHIST=1000000
 setopt inc_append_history # To save every command before it is executed 
 setopt share_history # setopt inc_append_history
 
+# Language
+export LANG=en_US.UTF-8
+# required for gcalcli (python)
+export LC_ALL=en_US.UTF-8
+
+
 ## MAN PAGES
 # Color man pages. Ref: https://unix.stackexchange.com/questions/108699/documentation-on-less-termcap-variables
 export LESS_TERMCAP_mb=$'\E[01;32m'
@@ -59,23 +65,30 @@ source $ZSH/oh-my-zsh.sh
 # zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting may be added
 source ~/dotfiles/zsh/keybindings.sh
 
+
 ## ALIAS SECTION
 [[ -f ~/.alias ]] && source ~/.alias
 
-export LANG=en_US.UTF-8
-# required for gcalcli (python)
-export LC_ALL=en_US.UTF-8
 
+## PATH SECTION
+# Golang
 [[ $OS == 'Darwin' ]] && export GOROOT="/usr/local/opt/go/libexec"
 [[ $OS == 'Darwin' ]] && export PATH="$PATH:$GOROOT/bin"
 #export GOPATH="$HOME/workspace/go"
 #export PATH="$HOME/.cargo/bin:$GOPATH/bin:$PATH"
 
+# Curl
 [[ $OS == 'Darwin' ]] && export PATH="/usr/local/opt/curl/bin:$PATH"
 
+
 ## FZF SECTION - MOVE THESE TO FZF.ZSH AND ADD LINUX SUPPORT
-# Configure
-[[ $OS == 'Darwin' && -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+# Key bindings and shell completion
+if [[ $OS == 'Linux' ]] then
+	source /usr/share/fzf/key-bindings.zsh
+	source /usr/share/fzf/completion.zsh
+elif [[ $OS == 'Darwin' && -f ~/.fzf.zsh ]] then
+	source ~/.fzf.zsh
+fi
 
 # use fd for fzf, and colorize output
 export FZF_DEFAULT_COMMAND='fd --type file --color=always --hidden --exclude .git'
@@ -85,6 +98,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # Using highlight (http://www.andre-simon.de/doku/highlight/en/highlight.html)
 export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 
+## TERMINAL SECTION
 # tweak iterm2 title bar colors for One Dark theme
 [[ $OS == 'Darwin' ]] && echo -e "\033]6;1;bg;red;brightness;40\a"
 [[ $OS == 'Darwin' ]] && echo -e "\033]6;1;bg;green;brightness;44\a"
