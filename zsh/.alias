@@ -1,6 +1,7 @@
 alias l='ls -alGpF'
 alias ..='cd ..'
 alias v='vim'
+alias vifmr='~/.config/vifm/scripts/vifmrun'
 alias nv="paste <(curl -s www.namazvakti.com | pup 'td[class=pText] text{}') <(curl -s www.namazvakti.com | pup 'td[class=pTime] text{}')"
 alias nb=newsboat
 alias df=df -h
