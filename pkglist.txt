@@ -1,6 +1,8 @@
 tmux
 fd
 fzf
+bat
+xclip
 go
 go-tools
 yay
@@ -14,3 +16,4 @@ zathura-pdf-mupdf
 newsboat
 light-locker
 sxiv
+figlet

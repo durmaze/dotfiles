@@ -90,13 +90,19 @@ elif [[ $OS == 'Darwin' && -f ~/.fzf.zsh ]] then
 	source ~/.fzf.zsh
 fi
 
-# use fd for fzf, and colorize output
-export FZF_DEFAULT_COMMAND='fd --type file --color=always --hidden --exclude .git'
-export FZF_DEFAULT_OPTS="--extended"
+# Use fd as the default command
+FD_OPTS="--follow --hidden --exclude .git --exclude node_modules" 
 
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# Configure behavior of the interactive finder. Set some options, preview handlers, and key bindings
+export FZF_DEFAULT_OPTS="--no-mouse --height 50% -1 --reverse --multi --inline-info --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f3:execute(bat --style=numbers {} || less -f {}),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-y:execute-silent(echo {+} | xclip -selection clipboard)'"
+
 # Using highlight (http://www.andre-simon.de/doku/highlight/en/highlight.html)
-export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+# export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+
+export FZF_DEFAULT_COMMAND="fd --type f --type l $FD_OPTS"
+export FZF_CTRL_T_COMMAND="fd $FD_OPTS"
+export FZF_ALT_C_COMMAND="fd --type d $FD_OPTS"
+
 
 ## TERMINAL SECTION
 # tweak iterm2 title bar colors for One Dark theme

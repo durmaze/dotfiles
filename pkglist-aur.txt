@@ -1,3 +1,4 @@
 gcalcli
 pup-git
 lightdm-webkit-theme-aether
+tty-clock
