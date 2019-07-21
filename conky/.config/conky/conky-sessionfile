@@ -1,0 +1,3 @@
+conky -c /home/erkan/.config/conky/Openbox-Golden-essential-keys.conkyrc & sleep 0.5
+# conky -c /home/erkan/.config/conky/Openbox-Golden-sysinfo.conkyrc & sleep 0.5
+conky -c /home/erkan/.config/conky/Long_Way_yellow & sleep 0.5

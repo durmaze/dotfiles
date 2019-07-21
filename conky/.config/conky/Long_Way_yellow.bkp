@@ -1,0 +1,60 @@
+# By Jesse_Avalos see me on Eye Candy linux google plus !!!!!
+background yes
+update_interval 1
+
+cpu_avg_samples 2
+net_avg_samples 2
+temperature_unit celsius
+
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+alignment top_middle
+gap_x 410
+gap_y 325
+minimum_size 550 550
+maximum_width 550
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+border_inner_margin 0
+border_outer_margin 0
+
+
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_shade_color 112422
+
+override_utf8_locale yes
+use_xft yes
+xftfont Tall Films:size=10
+xftalpha 1
+uppercase yes
+
+default_color CACCCB
+color1 CACCCB
+color2 ECE83F
+color3 EDD077
+
+own_window_colour 000000
+TEXT
+
+
+${goto 50}${font Tall Films:size=120}${time %m %d} ${time %I:%M}${offset 26}${time %S}${font Long Tall Sally EEN:size=20}
+${goto 50}${voffset -146}${color2}
+${goto 28}M ${offset 185}T${offset 152}
+${goto 30}o ${offset 90}D ${offset 86}i${offset 158}S
+${goto 30}n ${offset 88}A ${offset 84}m${offset 153}e
+${goto 30}t ${offset 88}Y ${offset 87}e${offset 155}c
+${goto 30}h   ${color1}${font Aileron:size=9}
+
+${goto 24}${exec lsb_release -sir}  Kernel: ${execi 360 uname -r}  Arch: ${offset 2}${machine}  Uptime:  ${uptime} ${font Aileron:size=10}  
+${goto 24}${voffset 5}CPU - ${color2}${cpu cpu0}% / 100%${color1}  RAM - ${color2}$memfree / $memmax${color1}  Temp - ${color2}$acpitemp'C${color1}  Home - ${color2}${fs_free /home} / ${fs_size /home}${color1}
+
+
+
