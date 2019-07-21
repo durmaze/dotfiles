@@ -1,0 +1,62 @@
+conky.config = {
+	background = true,
+	use_xft = true,
+	font = 'Swiss911 UCm BT:size=9',
+	xftalpha = 0.8,
+	update_interval = 1,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	double_buffer = true,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	stippled_borders = 0,
+	border_inner_margin = 0,
+	border_width = 0,
+	default_color = 'black',
+	default_shade_color = '#000000',
+	default_outline_color = '#000000',
+	minimum_width = 1920, minimum_height = 1080,
+	maximum_width = 2000,
+	gap_x = 0,
+	gap_y = 0,
+	alignment = 'top_middle',
+	no_buffers = true,
+	uppercase = true,
+	use_spacer = 'none',
+	override_utf8_locale = true,
+
+-- Color scheme #
+	default_color = 'white',
+	color1 = '#171717',
+	color2 = '#635025',
+	color3 = '#f8c630',
+	color4 = '#f6f6f6',
+
+	own_window_argb_value = 0,
+	own_window_argb_visual = false,
+	own_window_colour = '#000000',
+
+};
+
+conky.text = [[
+${voffset 510}${offset 1170}${color3}${font Swiss911 UCm BT:size=80}${time %I}:${time %M}:${time %S}
+${voffset -36}${offset 30}${color1} ${font Swiss911 UCm BT:size=45}${time %d %B %Y}
+
+${voffset -272}${offset 0}${color3} ${font PizzaDude Bullets:size=13}O ${font Neos:size=12} Upload : ${color3} ${upspeedf wlp0s20f3}Kbps / ${color1}${totalup wlp0s20f3}
+${voffset -1}${offset 5}${color3} ${font PizzaDude Bullets:size=13}U ${font Neos:size=12} Download : ${color3} ${downspeedf wlp0s20f3}Kbps / ${color1}${totaldown wlp0s20f3}
+
+${voffset -75}${offset 625}${color1} ${font Swiss911 UCm BT:size=23}Uptime 
+${voffset -5}${offset 588}${color1} ${font Swiss911 UCm BT:size=34}${uptime}
+
+${offset 10}${voffset -70}${font Steelfish:bold:size=14}${color4}Kernel: ${execi 360 uname -r}
+${offset 200}${voffset -23}Cpu:
+${offset 230}${voffset -23}${cpu }%
+${offset 285}${voffset -23}Ram:
+${offset 320}${voffset -23}${memperc }%
+
+]];
