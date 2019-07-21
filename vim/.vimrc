@@ -1,6 +1,13 @@
 " General Vim configuration
 	let g:os = substitute(system('uname'), '\n', '', '')
-	let g:netrw_home=$XDG_CACHE_HOME.'/vim'
+
+	" netrw directory browser settings
+	let g:netrw_liststyle=3 	" use tree list view by default
+	let g:netrw_banner=0 		" remove current directory banner
+	let g:netrw_winsize=25		" set window size ratio (i.e. %25 of the page)
+	let g:netrw_browse_split=4	" open in previous window (like NERDTree)
+	let g:netrw_altv=1
+	let	g:netrw_dirhistmax = 0 	" disable netrw history
 
 " Install vim-plug if it is not installed
 	if empty(glob('~/.vim/autoload/plug.vim'))

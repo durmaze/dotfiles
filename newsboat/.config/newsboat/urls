@@ -1,4 +1,4 @@
-# Software
+# Software Releases
 https://github.com/insanum/gcalcli/releases.atom "RELEASES: gcalcli releases" software
 
 # Blog
@@ -7,6 +7,9 @@ https://martinfowler.com/feed.atom "~BLOG: Martin Fowler" blog
 # News Feed
 https://www.linux.com/feeds/news/rss "~NEWSFEED: Linux.com"
 https://www.linuxjournal.com/news/feed "~NEWSFEED: Linux Journal"
+
+# Medium
+https://medium.com/feed/usevim "~MEDIUM: usevim"
 
 # Youtube
 ## Conferences
