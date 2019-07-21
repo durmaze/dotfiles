@@ -1,5 +1,6 @@
-" General variables
+" General Vim configuration
 	let g:os = substitute(system('uname'), '\n', '', '')
+	let g:netrw_home=$XDG_CACHE_HOME.'/vim'
 
 " Install vim-plug if it is not installed
 	if empty(glob('~/.vim/autoload/plug.vim'))
@@ -30,7 +31,7 @@
 
 	call plug#end()
 
-" General Vim settings
+" General Editor settings
 	set encoding=utf8
 
 	syntax on

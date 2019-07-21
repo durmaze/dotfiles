@@ -1,31 +1,34 @@
 # Software
-https://github.com/insanum/gcalcli/releases.atom "gcalcli releases" software
+https://github.com/insanum/gcalcli/releases.atom "RELEASES: gcalcli releases" software
 
 # Blog
-https://martinfowler.com/feed.atom "~Martin Fowler" blog
+https://martinfowler.com/feed.atom "~BLOG: Martin Fowler" blog
 
 # News Feed
-https://distrowatch.com/news/dw.xml "~NEWSFEED: DistroWatch" 
-http://lxer.com/module/newswire/headlines.rss "~NEWSFEED: LXer"
 https://www.linux.com/feeds/news/rss "~NEWSFEED: Linux.com"
 https://www.linuxjournal.com/news/feed "~NEWSFEED: Linux Journal"
-https://www.networkworld.com/category/linux/index.rss "~NEWSFEED: Network World (Linux)"
-https://www.computerworld.com/index.rss "~NEWSFEED: Computer World"
-http://feeds.feedburner.com/d0od "~NEWSFEED: OMG Ubuntu!"
-https://www.phoronix.com/rss.php "~NEWSFEED: Phoronix"
-https://www.zdnet.com/topic/linux/rss.xml "~NEWSFEED: ZDNet (Linux)"
-https://itsfoss.com/feed/ "~NEWSFEED: It's Foss"
-https://linux.softpedia.com/backend.xml "~NEWSFEED: Softpedia (Linux)"
-https://opensource.com/feed "~NEWSFEED: Opensource.com"
-https://betanews.com/feed/ "~NEWSFEED: Beta News"
-http://feeds.feedburner.com/fossbytes "~NEWSFEED: FossBytes"
-https://www.techrepublic.com/rssfeeds/topic/open-source/ "~NEWSFEED: Tech Republic (Open Source)"
-https://www.theinquirer.net/feeds/rss/tag/open-source "~NEWSFEED: The Inquirer (Open Source)"
-http://feeds.arstechnica.com/arstechnica/open-source "~NEWSFEED: ArsTechnica (Open Source)"
-https://www.linuxinsider.com/perl/syndication/rssfull.pl "~NEWSFEED: Linux Insider"
-https://hackaday.com/blog/feed/ "~NEWSFEED: Hackaday"
 
 # Youtube
+## Conferences
+https://www.youtube.com/feeds/videos.xml?user=GotoConferences "~YOUTUBE: GOTO Conferences"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCCBVCTuk6uJrN3iFV_3vurg "~YOUTUBE: Devoxx"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkQX1tChV7Z7l1LFF4L9j_g "~YOUTUBE: InfoQ"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_QIfHvN9auy2CoOdSfMWDw "~YOUTUBE: Strange Loop"
+
+## DevOps
+https://www.youtube.com/feeds/videos.xml?channel_id=UCZ2bu0qutTOM0tHYa_jkIwg "~YOUTUBE: Kubernetes"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-AdvAxaagE9W2f0webyNUQ "~YOUTUBE: HashiCorp"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvqbFHwN-nwalWPjPUKpvTA "~YOUTUBE: CNCF"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC76AVf2JkrwjxNKMuPpscHQ "~YOUTUBE: Docker"
+
+## Golang
+https://www.youtube.com/feeds/videos.xml?channel_id=UCCXEidaSeLAZkZMeRpJXDHQ "~YOUTUBE: Gopher"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCO3LEtymiLrgvpb59cNsb8A "~YOUTUBE: The Go Programming Language"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9ZNrGdT2aAdrNbX78lbNlQ "~YOUTUBE: GopherCon UK"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCx9QVEApa5BKLw9r8cnOFEA "~YOUTUBE: Gopher Academy"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCazkIMpjghmT8fugD1WF_DQ "~YOUTUBE: Singapore Gophers"
+
+## Linux
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~YOUTUBE: DistroTube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwY9B5_8QDGP8niZhBtTh8w "~YOUTUBE: TWiT Netcast"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCHugE6eRhqB9_AZQh4DDbIw "~YOUTUBE: Jupiter Broadcasting"
@@ -33,6 +36,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA "~Y
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~YOUTUBE: Luke Smith"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbHXJGd7c8Hy4z0-YX1Jf3Q "~YOUTUBE: Matt Hartley"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCWJUSpXVHTaHErtGWC5qPlQ "~YOUTUBE: Destination Linux"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvA_wgsX6eFAOXI8Rbg_WiQ "~YOUTUBE: Tutorial Linux"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw "~YOUTUBE: Linus Tech Tips"
 
 # Reddit
@@ -41,10 +45,12 @@ https://www.reddit.com/r/commandline.rss "~REDDIT: r/commandline"
 https://www.reddit.com/r/archlinux.rss "~REDDIT: r/archlinux"
 https://www.reddit.com/r/vim.rss "~REDDIT: r/vim"
 https://www.reddit.com/r/unixporn.rss "~REDDIT: r/unixporn"
+https://www.reddit.com/r/golang.rss "~REDDIT: r/golang"
 
 # Git Repos
 https://gitlab.com/dwt1.atom "~GITLAB: dwt1 (distrotube)"
 https://github.com/LukeSmithxyz.atom "~GITHUB: LukeSmithxyz"
+https://github.com/insanum/gcalcli.atom "~GITHUB: gcalcli"
 
 # Arch Linux
 https://www.archlinux.org/feeds/packages/added/ "~ARCH: Packages Added"

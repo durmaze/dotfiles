@@ -3,7 +3,7 @@ super + Return
 	$TERMINAL
 super + d
 	dmenu_run
-super + r
+super + f
 	$TERMINAL -e $FILE
 super + e
 	$TERMINAL -e neomutt
