@@ -162,6 +162,10 @@
 			\ endif
 	augroup END
 	
+" ==================== Gopass ====================
+" disable unsecure storage of temporary vim files
+au BufNewFile,BufRead /dev/shm/gopass.* setlocal noswapfile nobackup noundofile
+
 " ==================== NerdTree ====================
 " For toggling
 noremap <Leader>n :NERDTreeToggle<cr>

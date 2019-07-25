@@ -8,6 +8,7 @@ alias df=df -h
 alias free=free -m
 alias cp=cp -i		# confirm before overwriting something
 alias grep='grep --colour=auto'
+alias cal='cal --monday'
 
 function gcalendar() {
 	if [ "$#" -eq 0 ]; 	then 
