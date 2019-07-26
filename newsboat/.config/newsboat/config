@@ -3,7 +3,11 @@
 # reload-time 30 # re-check feeds every 30m
 notify-beep yes
 confirm-exit no
-
+max-items 40
+browser "xdg-open %u"
+delete-read-articles-on-quit yes
+openbrowser-and-mark-jumps-to-next-unread yes
+history-limit 20
 
 # key maps
 bind-key j down
