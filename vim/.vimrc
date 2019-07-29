@@ -127,6 +127,9 @@
 	set mouse=a "Enable mouse mode
 	set incsearch 					" Shows the match while typing
 
+	" Open URLs with urlview
+	:noremap <leader>u :w<Home>silent <End> !urlview<CR>
+
 " Language-specific 
 	" General
 		inoremap <leader>for <esc>Ifor (int i = 0; i < <esc>A; i++) {<enter>}<esc>O<tab>
