@@ -5,6 +5,7 @@ notify-beep yes
 confirm-exit no
 max-items 40
 browser "xdg-open %u"
+external-url-viewer "urlview"
 delete-read-articles-on-quit yes
 openbrowser-and-mark-jumps-to-next-unread yes
 history-limit 20

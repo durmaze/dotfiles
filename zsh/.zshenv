@@ -1,6 +1,6 @@
 export EDITOR="vim"
 export TERMINAL="termite"
-export BROWSER="google-chrome"
+export BROWSER="google-chrome-stable"
 export READER="zathura"
 export FILE="vifm"
 

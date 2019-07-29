@@ -18,3 +18,4 @@ light-locker
 sxiv
 figlet
 conky-manager
+youtube-dl

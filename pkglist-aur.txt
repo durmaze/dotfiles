@@ -4,3 +4,4 @@ lightdm-webkit-theme-aether
 tty-clock
 slack-desktop
 conky-cairo
+urlview-git
