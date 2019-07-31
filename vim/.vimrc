@@ -18,8 +18,11 @@
 
 " Install Vim plugins
 	call plug#begin('~/.vim/plugged')
+	
+	if g:os == "Darwin"
+		Plug '/usr/local/opt/fzf'
+	endif
 
-	Plug '/usr/local/opt/fzf'
 	Plug 'junegunn/fzf.vim'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'tpope/vim-surround'
@@ -180,3 +183,9 @@ let NERDTreeShowHidden=1
 	"Swap line
 	"Insert blank below and above
 
+" ==================== FZF ======================
+" Add namespace for fzf.vim exported Vim commands
+let g:fzf_command_prefix = 'Fzf'
+
+" Mappings
+nnoremap <silent> <leader>o :FzfFiles<CR>
