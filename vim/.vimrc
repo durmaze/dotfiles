@@ -187,5 +187,20 @@ let NERDTreeShowHidden=1
 " Add namespace for fzf.vim exported Vim commands
 let g:fzf_command_prefix = 'Fzf'
 
+" Key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Add layout
+let g:fzf_layout = { 'down': '~40%' }
+
+" Enable per-command history
+let g:fzf_history_dir = '$XDG_DATA_HOME/fzf-history'
+
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
 " Mappings
 nnoremap <silent> <leader>o :FzfFiles<CR>
