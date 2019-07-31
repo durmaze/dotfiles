@@ -19,3 +19,4 @@ sxiv
 figlet
 conky-manager
 youtube-dl
+the_silver_searcher
