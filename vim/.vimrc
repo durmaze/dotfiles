@@ -33,7 +33,7 @@
 	Plug 'christoomey/vim-tmux-navigator'
 
 	" required for :GoDecls
-	Plug 'ctrlpvim/ctrlp.vim'
+    " Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'ryanoasis/vim-devicons'
 
 	" sxhkd syntax highlighting
@@ -69,6 +69,9 @@
 	hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 
 	set hlsearch " Highlight found searches
+	set ignorecase 
+	set smartcase " ignorecase and smartcase are set. It will search case-insensitively for lowercase entry only
+	
 	nnoremap <C-l> :nohl<CR><C-l>:echo "Search Cleared"<CR>
 	nnoremap <C-c> :set norelativenumber<CR>:set nonumber<CR>:echo "Line numbers turned off."<CR>
 	nnoremap <C-n> :set relativenumber<CR>:set number<CR>:echo "Line numbers turned on."<CR>
@@ -204,3 +207,7 @@ let g:fzf_buffers_jump = 1
 
 " Mappings
 nnoremap <silent> <leader>o :FzfFiles<CR>
+
+" ==================== vim-go ======================
+" prefer fzf over ctrlp.vim plugin (to replace ctrlp plugin w/ fzf entirely)
+let g:go_decls_mode = 'fzf'
