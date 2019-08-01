@@ -16,6 +16,7 @@ stow neofetch
 stow newsboat
 stow nitrogen
 stow ranger
+stow rtv
 stow sxhkd
 stow sxiv
 stow termite

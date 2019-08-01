@@ -71,7 +71,8 @@
 	set hlsearch " Highlight found searches
 	set ignorecase 
 	set smartcase " ignorecase and smartcase are set. It will search case-insensitively for lowercase entry only
-	
+	set incsearch " Shows the match while typing
+
 	nnoremap <C-l> :nohl<CR><C-l>:echo "Search Cleared"<CR>
 	nnoremap <C-c> :set norelativenumber<CR>:set nonumber<CR>:echo "Line numbers turned off."<CR>
 	nnoremap <C-n> :set relativenumber<CR>:set number<CR>:echo "Line numbers turned on."<CR>
@@ -131,20 +132,9 @@
 	set listchars=tab:\|\
 	nnoremap <leader><tab> :set list!<cr>
 	set mouse=a "Enable mouse mode
-	set incsearch 					" Shows the match while typing
 
 	" Open URLs with urlview
 	:noremap <leader>u :w<Home>silent <End> !urlview<CR>
-
-" Language-specific 
-	" General
-		inoremap <leader>for <esc>Ifor (int i = 0; i < <esc>A; i++) {<enter>}<esc>O<tab>
-		inoremap <leader>if <esc>Iif (<esc>A) {<enter>}<esc>O<tab>
-
-	" Java
-		inoremap <leader>sys <esc>ISystem.out.println(<esc>A);
-		vnoremap <leader>sys yOSystem.out.println(<esc>pA);
-
 
 " File Management
 	inoremap <leader>w <Esc>:w<CR>
@@ -206,7 +196,18 @@ let g:fzf_history_dir = '$XDG_DATA_HOME/fzf-history'
 let g:fzf_buffers_jump = 1
 
 " Mappings
-nnoremap <silent> <leader>o :FzfFiles<CR>
+nnoremap <silent> <C-p> :FzfFiles<CR>
+nnoremap <silent> <C-b> :FzfBuffers<CR>
+nnoremap <silent> <C-g> :FzfBLines<CR>
+nnoremap <silent> <C-r> :FzfCommands<CR>
+cnoremap <silent> <C-p> :FzfHistory:<CR>
+nnoremap <silent> <F1> :FzfHelpTags<CR>
+inoremap <silent> <F1> <ESC>:FzfHelpTags<CR>
+inoremap <silent> <F3> <ESC>:FzfSnippets<CR>
+
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " ==================== vim-go ======================
 " prefer fzf over ctrlp.vim plugin (to replace ctrlp plugin w/ fzf entirely)
