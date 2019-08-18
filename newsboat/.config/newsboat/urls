@@ -1,5 +1,7 @@
 # Software Releases
-https://github.com/insanum/gcalcli/releases.atom "RELEASES: gcalcli releases" software
+https://github.com/insanum/gcalcli/releases.atom "~RELEASES: gcalcli releases" "dotfiles" 
+https://github.com/fatih/vim-go/releases.atom "~RELEASES: vim-go releases" "Golang" "Github"
+https://github.com/fatih/vim-go/commits.atom "~RELEASES: vim-go commits" "Golang" "Github"
 
 # Blog
 https://martinfowler.com/feed.atom "~BLOG: Martin Fowler" "Blog"
@@ -16,29 +18,22 @@ https://medium.com/feed/usevim "~MEDIUM: usevim" "Vim"
 ## Conferences
 https://www.youtube.com/feeds/videos.xml?user=GotoConferences "~YOUTUBE: GOTO Conferences" "Conferences"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCCBVCTuk6uJrN3iFV_3vurg "~YOUTUBE: Devoxx" "Conferences"
-
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkQX1tChV7Z7l1LFF4L9j_g "~YOUTUBE: InfoQ" "Conferences"
-
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_QIfHvN9auy2CoOdSfMWDw "~YOUTUBE: Strange Loop" "Conferences"
 
 
 ## DevOps
 https://www.youtube.com/feeds/videos.xml?channel_id=UCZ2bu0qutTOM0tHYa_jkIwg "~YOUTUBE: Kubernetes" "DevOps"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-AdvAxaagE9W2f0webyNUQ "~YOUTUBE: HashiCorp" "DevOps"
-
 https://www.youtube.com/feeds/videos.xml?channel_id=UCvqbFHwN-nwalWPjPUKpvTA "~YOUTUBE: CNCF" "DevOps"
-
 https://www.youtube.com/feeds/videos.xml?channel_id=UC76AVf2JkrwjxNKMuPpscHQ "~YOUTUBE: Docker" "DevOps"
 
 
 ## Golang
 https://www.youtube.com/feeds/videos.xml?channel_id=UCCXEidaSeLAZkZMeRpJXDHQ "~YOUTUBE: Gopher" "Golang"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCO3LEtymiLrgvpb59cNsb8A "~YOUTUBE: The Go Programming Language" "Golang"
-
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9ZNrGdT2aAdrNbX78lbNlQ "~YOUTUBE: GopherCon UK" "Golang"
-
 https://www.youtube.com/feeds/videos.xml?channel_id=UCx9QVEApa5BKLw9r8cnOFEA "~YOUTUBE: Gopher Academy" "Golang"
-
 https://www.youtube.com/feeds/videos.xml?channel_id=UCazkIMpjghmT8fugD1WF_DQ "~YOUTUBE: Singapore Gophers" "Golang"
 
 
@@ -64,7 +59,6 @@ https://www.reddit.com/r/golang.rss "~REDDIT: r/golang" "Golang"
 # Git Repos
 https://gitlab.com/dwt1.atom "~GITLAB: dwt1 (distrotube)" "dotfiles"
 https://github.com/LukeSmithxyz.atom "~GITHUB: LukeSmithxyz" "dotfiles"
-https://github.com/insanum/gcalcli.atom "~GITHUB: gcalcli" "dotfiles"
 
 # Arch Linux
 https://wiki.archlinux.org/api.php?hidebots=1&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=rss "~ARCH: Arch Wiki" "Linux"
