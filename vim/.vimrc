@@ -199,6 +199,7 @@ let g:fzf_buffers_jump = 1
 nnoremap <silent> <C-p> :FzfFiles<CR>
 nnoremap <silent> <C-b> :FzfBuffers<CR>
 nnoremap <silent> <C-g> :FzfBLines<CR>
+nnoremap <silent> <C-G> :FzfLines<CR>
 nnoremap <silent> <C-r> :FzfCommands<CR>
 cnoremap <silent> <C-p> :FzfHistory:<CR>
 nnoremap <silent> <F1> :FzfHelpTags<CR>
@@ -224,9 +225,12 @@ let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
+let g:go_highlight_functions_calls = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
+let g:go_tesh_show_name = 1
+let g:go_auto_type_info = 1
 

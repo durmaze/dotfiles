@@ -135,6 +135,13 @@ command! mkcd :mkdir %a | cd %a
 command! vgrep vim "+grep %a"
 command! reload :write | restart
 
+
+" FZF commands
+" https://wiki.vifm.info/index.php/How_to_integrate_fzf_for_fuzzy_finding
+
+command! FZFlocate :set noquickview | :execute 'goto "'.system('locate $HOME | fzf --height 10 2>/dev/tty ').'"%IU' | redraw
+command! FZFfind :set noquickview | :execute 'goto "'.system('find | fzf --height 10 2>/dev/tty ').'"%IU' | redraw
+
 " ------------------------------------------------------------------------------
 
 " The file type is for the default programs to be used with
@@ -460,6 +467,10 @@ nnoremap <f5> :copy<cr>
 nnoremap <f6> :move<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
+
+" FZF mappings
+nnoremap <c-g> :FZFlocate<cr>
+nnoremap <c-f> :FZFfind<cr>
 
 " ------------------------------------------------------------------------------
 
