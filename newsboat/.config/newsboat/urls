@@ -6,6 +6,7 @@ https://github.com/fatih/vim-go/commits.atom "~RELEASES: vim-go commits" "Golang
 # Blog
 https://martinfowler.com/feed.atom "~BLOG: Martin Fowler" "Blog"
 https://www.thoughtworks.com/rss/insights.xml "~BLOG: ThoughtWorks Insights" "Blog"
+https://kubernetes.io/feed.xml "~BLOG: Kubernetes" "Blog"
 
 # News Feed
 https://www.linux.com/feeds/news/rss "~NEWSFEED: Linux.com" "Linux"
