@@ -65,6 +65,9 @@ source $ZSH/oh-my-zsh.sh
 # zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting may be added
 source ~/dotfiles/zsh/keybindings.sh
 
+# install kubectl package manager krew https://krew.dev
+[[ -d ~/.krew ]] || source ~/dotfiles/zsh/.install_krew 
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 ## ALIAS SECTION
 [[ -f ~/.alias ]] && source ~/.alias
