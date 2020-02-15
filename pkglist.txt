@@ -23,3 +23,6 @@ the_silver_searcher
 docker
 tldr
 rclone
+kubectl
+kubectx
+k9s

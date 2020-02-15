@@ -6,3 +6,4 @@ slack-desktop
 conky-cairo
 urlview-git
 visual-studio-code-bin
+minikube
