@@ -7,3 +7,4 @@ conky-cairo
 urlview-git
 visual-studio-code-bin
 minikube
+istio-bin

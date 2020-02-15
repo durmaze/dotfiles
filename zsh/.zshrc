@@ -69,6 +69,11 @@ source ~/dotfiles/zsh/keybindings.sh
 [[ -d ~/.krew ]] || source ~/dotfiles/zsh/.install_krew 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# source istioctl auto-completion if it is installed
+# installation one-liner
+# mkdir -p ~/.completions && istioctl collateral --zsh -o ~/.completions
+[[ -f ~/.completions/_istioctl ]] && source ~/.completions/_istioctl
+
 ## ALIAS SECTION
 [[ -f ~/.alias ]] && source ~/.alias
 
