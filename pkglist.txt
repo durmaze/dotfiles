@@ -22,3 +22,4 @@ youtube-dl
 the_silver_searcher
 docker
 tldr
+rclone

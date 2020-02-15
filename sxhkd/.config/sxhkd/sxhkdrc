@@ -1,4 +1,6 @@
-# Basic binds
+################
+# Applications #
+################
 super + Return
 	$TERMINAL
 super + d
@@ -13,3 +15,47 @@ super + n
 	$TERMINAL -e newsboat
 super + i
 	$TERMINAL -e htop
+Print
+	flameshot gui
+ctrl + alt + l
+	light-locker-command -l 
+
+#########
+# Media #
+#########
+# Toggle mute
+XF86AudioMute
+    pulseaudio-ctl mute
+
+# Toggle mic mute
+XF86AudioMicMute
+    pulseaudio-ctl mute-input
+
+# Change volume
+XF86Audio{Raise,Lower}Volume
+    pulseaudio-ctl {up,down} 2
+
+# Change volume
+# super + {k,j}
+#   pulseaudio-ctl {up,down} 2
+
+# Change volume, chunky
+# super + shift + {k,j}
+#    pulseaudio-ctl {up,down} 10
+
+# Toggle mpd
+# super + 0
+#     mpc -q toggle
+
+# Navigate mpd playlist
+# super + {comma, period}
+#    mpc -q {prev, next}
+
+# Display current mpd track
+# super + slash
+#    notify-send -u low "$(mpc -f "%title%" current)" "by $(mpc -f "%artist%" current)\non $(mpc -f "%album%" current) (#$(mpc -f "%track%" current))\n$(mpc -f "%originaldate%" current)"
+
+# Play the video URL in the clipboard
+# super + m
+#     play
+	
