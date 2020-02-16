@@ -65,13 +65,12 @@ source $ZSH/oh-my-zsh.sh
 # zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting may be added
 source ~/dotfiles/zsh/keybindings.sh
 
-# install kubectl package manager krew https://krew.dev
+# source kubectl package manager krew (https://krew.dev)
 [[ -d ~/.krew ]] || source ~/dotfiles/zsh/.install_krew 
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+[[ -d ~/.krew ]] && export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# source istioctl auto-completion if it is installed
-# installation one-liner
-# mkdir -p ~/.completions && istioctl collateral --zsh -o ~/.completions
+# source istioctl auto-completion 
+[[ -f ~/.completions/_istioctl ]] || { mkdir -p ~/.completions && istioctl collateral --zsh -o ~/.completions }
 [[ -f ~/.completions/_istioctl ]] && source ~/.completions/_istioctl
 
 ## ALIAS SECTION
