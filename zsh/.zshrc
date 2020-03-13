@@ -56,13 +56,18 @@ export LESS=-r
 # Install
 [[ -d ~/.oh-my-zsh ]] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Install custom plugins (which requires manual installation)
+ZSH_CUSTOM_PLUGINS=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins
+[[ -d $ZSH_CUSTOM_PLUGINS/zsh-syntax-highlighting ]] || git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM_PLUGINS/zsh-syntax-highlighting
+[[ -d $ZSH_CUSTOM_PLUGINS/zsh-autosuggestions ]] || git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM_PLUGINS/zsh-autosuggestions
+[[ -d $ZSH_CUSTOM_PLUGINS/zsh-completions ]] || git clone https://github.com/zsh-users/zsh-completions.git $ZSH_CUSTOM_PLUGINS/zsh-completions
+
 # Plugins
-plugins=(git vi-mode docker vagrant golang minikube kubectl)
+plugins=(git vi-mode docker vagrant golang minikube kubectl zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 # Configure
 export ZSH=/home/erkan/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-# zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting may be added
 source ~/dotfiles/zsh/keybindings.sh
 
 # source kubectl package manager krew (https://krew.dev)

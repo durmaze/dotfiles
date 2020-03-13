@@ -28,3 +28,4 @@ rclone
 kubectl
 kubectx
 k9s
+dictd

@@ -60,6 +60,7 @@ https://www.reddit.com/r/golang.rss "~REDDIT: r/golang" "Golang"
 # Git Repos
 https://gitlab.com/dwt1.atom "~GITLAB: dwt1 (distrotube)" "dotfiles"
 https://github.com/LukeSmithxyz.atom "~GITHUB: LukeSmithxyz" "dotfiles"
+https://github.com/zalando/public-presentations/commits/master.atom "~GITHUB: Zalando public presentations" "Conferences"
 
 # Arch Linux
 https://wiki.archlinux.org/api.php?hidebots=1&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=rss "~ARCH: Arch Wiki" "Linux"
