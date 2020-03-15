@@ -1,14 +1,6 @@
 " General Vim configuration
 	let g:os = substitute(system('uname'), '\n', '', '')
 
-	" netrw directory browser settings
-	let g:netrw_liststyle=3 	" use tree list view by default
-	let g:netrw_banner=0 		" remove current directory banner
-	let g:netrw_winsize=25		" set window size ratio (i.e. %25 of the page)
-	let g:netrw_browse_split=4	" open in previous window (like NERDTree)
-	let g:netrw_altv=1
-	let	g:netrw_dirhistmax = 0 	" disable netrw history
-
 " Install vim-plug if it is not installed
 	if empty(glob('~/.vim/autoload/plug.vim'))
 	  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -24,6 +16,7 @@
 	endif
 
 	Plug 'junegunn/fzf.vim'
+	Plug 'mileszs/ack.vim'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-repeat'
@@ -39,14 +32,35 @@
 	" sxhkd syntax highlighting
 	Plug 'kovetskiy/sxhkd-vim'
 
+	" Dracula color theme
+	Plug 'dracula/vim', { 'as': 'dracula' }
+
 	call plug#end()
 
 " General Editor settings
-	set encoding=utf8
+	let mapleader=","
+	
+	" Change how vim represents characters on the screen
+	set encoding=utf-8
+
+	" Set the encoding of files written
+	set fileencoding=utf-8
 
 	syntax on
-	let mapleader=","
 	set autoindent
+
+	" enable true colors both inside and outside of tmux
+	if exists('+termguicolors')
+		" in order to support true colors inside tmux, below 2 lines are required
+		" https://stackoverflow.com/questions/53327486/whats-happening-here-with-vim-inside-tmux-pane
+   		let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+   		let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+		" enables true colors
+  		set termguicolors
+	endif
+
+	colorscheme dracula
 	
 	" to toggle paste mode due to autoindent
 	" https://unix.stackexchange.com/questions/199203/why-does-vim-indent-pasted-code-incorrectly
@@ -137,6 +151,10 @@
 	:noremap <leader>u :w<Home>silent <End> !urlview<CR>
 
 " File Management
+
+	" auto-detects file types
+	filetype plugin indent on
+	
 	inoremap <leader>w <Esc>:w<CR>
 	nnoremap <leader>w :w<CR>
 
@@ -160,7 +178,18 @@
 			\	execute 'normal! g`"zvzz' |
 			\ endif
 	augroup END
-	
+
+
+" ==================== Netrw =====================
+" netrw directory browser settings
+let g:netrw_liststyle=3 	" use tree list view by default
+let g:netrw_banner=0 		" remove current directory banner
+let g:netrw_winsize=25		" set window size ratio (i.e. %25 of the page)
+let g:netrw_browse_split=4	" open in previous window (like NERDTree)
+let g:netrw_altv=1
+let	g:netrw_dirhistmax = 0 	" disable netrw history
+
+
 " ==================== Gopass ====================
 " disable unsecure storage of temporary vim files
 au BufNewFile,BufRead /dev/shm/gopass.* setlocal noswapfile nobackup noundofile
@@ -175,6 +204,20 @@ let NERDTreeShowHidden=1
 " Future stuff
 	"Swap line
 	"Insert blank below and above
+
+
+" ========== ACK (ag - silver searcher)==========
+" fzf.vim also adds an Ag command, which is not related to Ack command added by this plugin
+
+" use 'ag' for the ack.vim plugin, if it is available
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" Ack jumps to the first quick fix. Use 'bang' option always to open up the quick fix list, instead
+cnoreabbrev Ack Ack!
+" nnoremap <Leader>a :Ack!<Space>
+
 
 " ==================== FZF ======================
 " Add namespace for fzf.vim exported Vim commands
@@ -214,11 +257,25 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " prefer fzf over ctrlp.vim plugin (to replace ctrlp plugin w/ fzf entirely)
 let g:go_decls_mode = 'fzf'
 
+" run goimports along gofmt on each save 
+let g:go_fmt_command = "goimports"     
+
+" activates autocomplete prompt when '.' is pressed
+au filetype go inoremap <buffer> . .<C-x><C-o>
+
+" If you want to disable gofmt on save
+" let g:go_fmt_autosave = 0
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+
 " tabs
 au FileType go set noexpandtab
-au FileType go set shiftwidth=4
-au FileType go set softtabstop=4
-au FileType go set tabstop=4
+au FileType go set shiftwidth=4		" sw - when indenting with '>', use 4 spaces width
+au FileType go set softtabstop=4	" sts - control <tab> and <bs> keys to match tabstop
+au FileType go set tabstop=4 		" ts - show existing tab with 4 spaces width
+
 
 " colors
 let g:go_highlight_build_constraints = 1

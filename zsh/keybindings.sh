@@ -32,7 +32,7 @@
 	zle -N goto_home
 	bindkey "^~" goto_home
 
-# Edit and rerun
+# Edit and rerun the last command
 	function edit_and_run() {
 		BUFFER="fc"
 		zle accept-line
