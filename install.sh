@@ -13,6 +13,7 @@ stow git
 stow macos
 stow mutt
 stow neofetch
+stow neomutt
 stow newsboat
 stow nitrogen
 stow ranger

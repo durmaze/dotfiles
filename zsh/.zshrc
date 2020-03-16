@@ -74,9 +74,20 @@ source ~/dotfiles/zsh/keybindings.sh
 [[ -d ~/.krew ]] || source ~/dotfiles/zsh/.install_krew 
 [[ -d ~/.krew ]] && export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# create .completions folder for custom zsh auto-completions
+[[ -d ~/.completions ]] || { mkdir -p ~/.completions }
+fpath=(~/.completions $fpath)
+
 # source istioctl auto-completion 
-[[ -f ~/.completions/_istioctl ]] || { mkdir -p ~/.completions && istioctl collateral --zsh -o ~/.completions }
+[[ -f ~/.completions/_istioctl ]] || { istioctl collateral --zsh -o ~/.completions }
 [[ -f ~/.completions/_istioctl ]] && source ~/.completions/_istioctl
+
+# source kind auto-completion
+[[ -f ~/.completions/_kind ]] || { kind completion zsh > ~/.completions/_kind }
+[[ -f ~/.completions/_kind ]] && source ~/.completions/_kind
+
+# reload auto-completions
+autoload -U compinit && compinit
 
 ## ALIAS SECTION
 [[ -f ~/.alias ]] && source ~/.alias

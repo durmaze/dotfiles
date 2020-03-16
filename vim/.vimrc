@@ -18,9 +18,11 @@
 	Plug 'junegunn/fzf.vim'
 	Plug 'mileszs/ack.vim'
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-repeat'
 	Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'itchyny/lightline.vim'
 
 	Plug 'christoomey/vim-tmux-navigator'
@@ -32,8 +34,9 @@
 	" sxhkd syntax highlighting
 	Plug 'kovetskiy/sxhkd-vim'
 
-	" Dracula color theme
+	" Color themes
 	Plug 'dracula/vim', { 'as': 'dracula' }
+	Plug 'tomasiser/vim-code-dark'
 
 	call plug#end()
 
@@ -60,6 +63,7 @@
   		set termguicolors
 	endif
 
+	" colorscheme codedark
 	colorscheme dracula
 	
 	" to toggle paste mode due to autoindent

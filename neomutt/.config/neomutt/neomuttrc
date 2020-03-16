@@ -57,3 +57,6 @@ set imap_idle
 set imap_check_subscribed
 unset imap_passive
 unset imap_peek
+
+# color themes
+source ~/.config/neomutt/dracula.muttrc
