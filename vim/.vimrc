@@ -22,13 +22,19 @@
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-repeat'
 	Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
+
+	" switch between single-line and multi-line forms of code
+	" gS => split, gJ => join
+	Plug 'AndrewRadev/splitjoin'
+
+	" comments stuff out
+	Plug 'preservim/nerdcommenter'
+
+	" LSP client
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 	Plug 'itchyny/lightline.vim'
-
 	Plug 'christoomey/vim-tmux-navigator'
-
-	" required for :GoDecls
-    " Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'ryanoasis/vim-devicons'
 
 	" sxhkd syntax highlighting
@@ -70,11 +76,19 @@
 	" https://unix.stackexchange.com/questions/199203/why-does-vim-indent-pasted-code-incorrectly
 	set pastetoggle=<F2>
 
+	" enable status line (e.g. for vim-lightline)
+	set laststatus=2
+
+	" disable (INSERT/VISUAL/...) mode showing in the lastline, since we've got that with vim-lightline
+	" lastline is needed for the COMMAND mode
+	set noshowmode
+
 	set tabstop=4
 	set shiftwidth=4
 	set dir=/tmp/
 	set relativenumber
 	set number
+	set noerrorbells             " No beeps
 
 	" http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
 	set clipboard^=unnamed
@@ -198,6 +212,7 @@ let	g:netrw_dirhistmax = 0 	" disable netrw history
 " disable unsecure storage of temporary vim files
 au BufNewFile,BufRead /dev/shm/gopass.* setlocal noswapfile nobackup noundofile
 
+
 " ==================== NerdTree ====================
 " For toggling
 noremap <Leader>n :NERDTreeToggle<cr>
@@ -208,6 +223,20 @@ let NERDTreeShowHidden=1
 " Future stuff
 	"Swap line
 	"Insert blank below and above
+
+
+" =============== Nerd Commenter ================
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
 
 
 " ========== ACK (ag - silver searcher)==========
@@ -243,12 +272,31 @@ let g:fzf_history_dir = '$XDG_DATA_HOME/fzf-history'
 let g:fzf_buffers_jump = 1
 
 " Mappings
-nnoremap <silent> <C-p> :FzfFiles<CR>
+" files
+nnoremap <silent> <C-p> :FzfFiles<CR>		
+
+" open buffers
 nnoremap <silent> <C-b> :FzfBuffers<CR>
+
+" lines in the current buffer
 nnoremap <silent> <C-g> :FzfBLines<CR>
+
+" lines in the loaded buffers
 nnoremap <silent> <C-G> :FzfLines<CR>
+
+" Ag search
+" nnoremap <silent> <C-b> :FzfAg<CR>
+
+" vim commands
 nnoremap <silent> <C-r> :FzfCommands<CR>
+
+" command history
 cnoremap <silent> <C-p> :FzfHistory:<CR>
+
+" vim mappings
+" nnoremap <silent> <C-b> :FzfMaps<CR>
+
+" misc
 nnoremap <silent> <F1> :FzfHelpTags<CR>
 inoremap <silent> <F1> <ESC>:FzfHelpTags<CR>
 inoremap <silent> <F3> <ESC>:FzfSnippets<CR>
@@ -258,6 +306,8 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " ==================== vim-go ======================
+
+" settings
 " prefer fzf over ctrlp.vim plugin (to replace ctrlp plugin w/ fzf entirely)
 let g:go_decls_mode = 'fzf'
 
@@ -272,6 +322,23 @@ au filetype go inoremap <buffer> . .<C-x><C-o>
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+
+" use camelcase for go tags (default is snake_case)
+let g:go_modifytags_transform = 'camelcase'
+
+" let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+" let g:go_metalinter_autosave = 1
+" let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+" let g:go_metalinter_deadline = '5s'
+
+" show GoInfo in the lastline
+let g:go_auto_type_info = 1
+
+" show failed tests before errors and logs
+let g:go_test_show_name = 1
+
+" use quickfix windows for everything
+let g:go_list_type = "quickfix"
 
 
 " tabs
@@ -291,7 +358,16 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
-let g:go_auto_sameids = 1
-let g:go_tesh_show_name = 1
-let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1 					" highlight same identifiers
 
+
+" mappings
+" ]] => next method motion, [[ => prev method motion
+" K => shows doc
+
+" TODO map cnext and cprev
+" map <C-n> :cnext<CR>
+" map <C-m> :cprevious<CR>
+" nnoremap <leader>a :cclose<CR>
+"
+" TODO add <Plug> key mappings
