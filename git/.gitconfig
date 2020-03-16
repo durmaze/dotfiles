@@ -18,3 +18,5 @@
 	ui = auto
 [credential "https://github.com"]
 	username = durmaze
+[credential]
+	helper = "!gopass git-credential $@"
