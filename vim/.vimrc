@@ -25,7 +25,7 @@
 
 	" switch between single-line and multi-line forms of code
 	" gS => split, gJ => join
-	Plug 'AndrewRadev/splitjoin'
+	Plug 'andrewradev/splitjoin.vim'
 
 	" comments stuff out
 	Plug 'preservim/nerdcommenter'
