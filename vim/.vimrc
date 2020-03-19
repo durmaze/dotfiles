@@ -234,7 +234,7 @@ let NERDTreeShowHidden=1
 	"Insert blank below and above
 
 
-" =============== Nerd Commenter ================
+" ================ NerdCommenter ================
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 

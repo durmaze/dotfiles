@@ -70,6 +70,13 @@ export ZSH=/home/erkan/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/zsh/keybindings.sh
 
+# Auto-suggestions
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+# inspired by vim keys
+bindkey '^[l' autosuggest-accept 		# alt+l
+bindkey '^[j' autosuggest-execute		# alt+j
+
+# Auto-completions
 # source kubectl package manager krew (https://krew.dev)
 [[ -d ~/.krew ]] || source ~/dotfiles/zsh/.install_krew 
 [[ -d ~/.krew ]] && export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
