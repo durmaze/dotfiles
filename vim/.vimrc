@@ -15,32 +15,46 @@
 		Plug '/usr/local/opt/fzf'
 	endif
 
+	" search capabilities
 	Plug 'junegunn/fzf.vim'
 	Plug 'mileszs/ack.vim'
+
+	" tmux integration
+	Plug 'christoomey/vim-tmux-navigator'
+
+	" status line
+	Plug 'itchyny/lightline.vim'
+	
+	" adds IDE-like nature
 	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-	Plug 'tpope/vim-surround'
-	Plug 'tpope/vim-repeat'
+	Plug 'ryanoasis/vim-devicons'
+
+	" golang
 	Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
+	
+	" LSP client
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+	" supporting IDE features
+	" adds 'surroundings' operators => operators; cs (change), ds (delete), ys (add)
+	" e.g cs"', ds", yss), ysiw[ 
+	Plug 'tpope/vim-surround'
+
+	" repeats last executed mapping via '.' key 
+	Plug 'tpope/vim-repeat'
 
 	" switch between single-line and multi-line forms of code
 	" gS => split, gJ => join
-	Plug 'andrewradev/splitjoin.vim'
+	 Plug 'andrewradev/splitjoin.vim'
 
 	" comments stuff out
 	Plug 'preservim/nerdcommenter'
 
-	" LSP client
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-	Plug 'itchyny/lightline.vim'
-	Plug 'christoomey/vim-tmux-navigator'
-	Plug 'ryanoasis/vim-devicons'
-
 	" sxhkd syntax highlighting
 	Plug 'kovetskiy/sxhkd-vim'
-
-	" Color themes
+ 
+	" color themes
 	Plug 'dracula/vim', { 'as': 'dracula' }
 	Plug 'tomasiser/vim-code-dark'
 
@@ -170,7 +184,7 @@
 
 " File Management
 
-	" auto-detects file types
+	" enable filetype detection (i.e. mainly for language-specific settings)
 	filetype plugin indent on
 	
 	inoremap <leader>w <Esc>:w<CR>
@@ -304,70 +318,3 @@ inoremap <silent> <F3> <ESC>:FzfSnippets<CR>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-l> <plug>(fzf-complete-line)
-
-" ==================== vim-go ======================
-
-" settings
-" prefer fzf over ctrlp.vim plugin (to replace ctrlp plugin w/ fzf entirely)
-let g:go_decls_mode = 'fzf'
-
-" run goimports along gofmt on each save 
-let g:go_fmt_command = "goimports"     
-
-" activates autocomplete prompt when '.' is pressed
-au filetype go inoremap <buffer> . .<C-x><C-o>
-
-" If you want to disable gofmt on save
-" let g:go_fmt_autosave = 0
-
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-
-" use camelcase for go tags (default is snake_case)
-let g:go_modifytags_transform = 'camelcase'
-
-" let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-" let g:go_metalinter_autosave = 1
-" let g:go_metalinter_autosave_enabled = ['vet', 'golint']
-" let g:go_metalinter_deadline = '5s'
-
-" show GoInfo in the lastline
-let g:go_auto_type_info = 1
-
-" show failed tests before errors and logs
-let g:go_test_show_name = 1
-
-" use quickfix windows for everything
-let g:go_list_type = "quickfix"
-
-
-" tabs
-au FileType go set noexpandtab
-au FileType go set shiftwidth=4		" sw - when indenting with '>', use 4 spaces width
-au FileType go set softtabstop=4	" sts - control <tab> and <bs> keys to match tabstop
-au FileType go set tabstop=4 		" ts - show existing tab with 4 spaces width
-
-
-" colors
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_functions_calls = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
-let g:go_auto_sameids = 1 					" highlight same identifiers
-
-
-" mappings
-" ]] => next method motion, [[ => prev method motion
-" K => shows doc
-
-" TODO map cnext and cprev
-" map <C-n> :cnext<CR>
-" map <C-m> :cprevious<CR>
-" nnoremap <leader>a :cclose<CR>
-"
-" TODO add <Plug> key mappings
