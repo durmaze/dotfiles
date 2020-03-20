@@ -35,7 +35,9 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+" <c-space> is not working in Vim 8 => https://www.reddit.com/r/vim/comments/dat6zc/cocnvim_autocompletion_not_working_for_cspace_in/
+" inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <c-@> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
