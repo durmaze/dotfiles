@@ -35,3 +35,8 @@ enable custom preferences directory for iterm2. add it to the installation scrip
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+
+openbox rc.xml'i dotfile'a ekle
+https://medium.com/@waterkip/managing-my-dotfiles-with-gnu-stow-262d2540a866
+https://unix.stackexchange.com/questions/121910/gnu-stow-how-to-stow-only-selected-files-folders

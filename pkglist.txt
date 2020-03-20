@@ -30,3 +30,4 @@ kubectx
 k9s
 dictd
 neomutt
+yarn

@@ -20,6 +20,7 @@ stow ranger
 stow rtv
 stow sxhkd
 stow sxiv
+stow synapse
 stow termite
 stow tmux
 stow vifm

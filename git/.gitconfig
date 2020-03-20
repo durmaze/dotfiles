@@ -7,6 +7,7 @@
 	excludesfile = /Users/erkand/.gitignore
 	commentchar = @
 	editor = $(which vim)
+	autocrlf = input
 [alias]
 	st = status -sb
 	ci = commit

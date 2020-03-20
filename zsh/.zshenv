@@ -11,4 +11,5 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # Golang
 export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
+export GOBIN="$GOPATH/bin" 		# not required
+export PATH="$PATH:$GOBIN"

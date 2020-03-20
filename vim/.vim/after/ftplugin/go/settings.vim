@@ -30,6 +30,9 @@ let g:go_test_show_name = 1
 " makes all list types (location list and quickfix) to be quickfix
 let g:go_list_type = "quickfix"
 
+" disable vim-go :GoDef short cut (gd). this is handled by the LspClient 
+let g:go_def_mapping_enabled = 0
+
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
