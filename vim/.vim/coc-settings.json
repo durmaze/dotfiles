@@ -4,6 +4,10 @@
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
-    }
+    },
+	"yaml.schemas": {
+		"yaml.trace.server": "verbose",
+		"kubernetes": "/*.yaml"
+	}
   }
 }

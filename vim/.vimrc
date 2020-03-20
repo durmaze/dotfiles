@@ -227,7 +227,8 @@ let	g:netrw_dirhistmax = 0 	" disable netrw history
 noremap <Leader>n :NERDTreeToggle<cr>
 noremap <Leader>f :NERDTreeFind<cr>
 
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden=1
+let g:NERDTreeIgnore=['^.git$']
 
 " Future stuff
 	"Swap line
