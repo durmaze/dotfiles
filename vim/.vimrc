@@ -31,7 +31,7 @@
 	Plug 'ryanoasis/vim-devicons'
 
 	" golang
-	Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
+	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	
 	" LSP client
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}

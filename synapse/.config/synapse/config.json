@@ -23,8 +23,7 @@
       "exit" : "<Control>q"
     },
     "global" : {
-      "ui-type" : "essential",
-      "show-indicator" : false
+      "ui-type" : "essential"
     }
   }
 }
