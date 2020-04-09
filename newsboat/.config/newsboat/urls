@@ -7,8 +7,11 @@ https://github.com/fatih/vim-go/commits.atom "~RELEASES: vim-go commits" "Golang
 https://martinfowler.com/feed.atom "~BLOG: Martin Fowler" "Blog"
 https://www.thoughtworks.com/rss/insights.xml "~BLOG: ThoughtWorks Insights" "Blog"
 https://kubernetes.io/feed.xml "~BLOG: Kubernetes" "Blog"
+https://venilnoronha.io/feed.xml "~BLOG: Venil Noronha" "Blog"
+https://istio.io/blog/feed.xml "~BLOG: Istio" "Blog"
 
 # News Feed
+https://www.hashicorp.com/resources/feed.xml "~NEWSFEED: HashiCorp Community Portal" "HashiCorp"
 https://www.linux.com/feeds/news/rss "~NEWSFEED: Linux.com" "Linux"
 https://www.linuxjournal.com/news/feed "~NEWSFEED: Linux Journal" "Linux"
 
@@ -25,7 +28,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC_QIfHvN9auy2CoOdSfMWDw "~Y
 
 ## DevOps
 https://www.youtube.com/feeds/videos.xml?channel_id=UCZ2bu0qutTOM0tHYa_jkIwg "~YOUTUBE: Kubernetes" "DevOps"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC-AdvAxaagE9W2f0webyNUQ "~YOUTUBE: HashiCorp" "DevOps"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-AdvAxaagE9W2f0webyNUQ "~YOUTUBE: HashiCorp" "DevOps" "HashiCorp"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCvqbFHwN-nwalWPjPUKpvTA "~YOUTUBE: CNCF" "DevOps"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC76AVf2JkrwjxNKMuPpscHQ "~YOUTUBE: Docker" "DevOps"
 

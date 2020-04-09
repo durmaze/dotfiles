@@ -94,6 +94,10 @@ fpath=(~/.completions $fpath)
 [[ -f ~/.completions/_kind ]] || { kind completion zsh > ~/.completions/_kind }
 [[ -f ~/.completions/_kind ]] && source ~/.completions/_kind
 
+# source helm auto-completion
+[[ -f ~/.completions/_helm ]] || { helm completion zsh > ~/.completions/_helm }
+[[ -f ~/.completions/_helm ]] && source ~/.completions/_helm
+
 # reload auto-completions
 autoload -U compinit && compinit
 

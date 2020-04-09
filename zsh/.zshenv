@@ -13,3 +13,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin" 		# not required
 export PATH="$PATH:$GOBIN"
+
+# Man
+export MANPAGER="sh -c 'col -bx | bat -l man -p'" 		# set MANPAGER to 'bat'
+# export MANROFFOPT="-c" 								# set if you experience formatting problems

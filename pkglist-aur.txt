@@ -1,5 +1,6 @@
 gcalcli
 pup-git
+yq2-bin
 lightdm-webkit-theme-aether
 tty-clock
 slack-desktop
@@ -8,3 +9,4 @@ urlview-git
 visual-studio-code-bin
 minikube
 istio-bin
+kubernetes-helm
