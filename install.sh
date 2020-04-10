@@ -8,6 +8,7 @@ stow bash
 stow conky
 stow curl
 stow fonts && fc-cache
+stow flameshot
 stow gcalcli
 stow git
 stow macos
