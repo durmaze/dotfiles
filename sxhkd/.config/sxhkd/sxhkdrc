@@ -16,7 +16,7 @@ super + n
 super + i
 	$TERMINAL -e htop
 Print
-	flameshot gui
+	flameshot gui -p ~/Pictures/Screenshots
 ctrl + alt + l
 	light-locker-command -l 
 
