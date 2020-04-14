@@ -2,7 +2,6 @@ alias l='ls -alGpF'
 alias ..='cd ..'
 alias v='vim'
 alias vifmr='~/.config/vifm/scripts/vifmrun'
-alias nv="paste <(curl -s www.namazvakti.com | pup 'td[class=pText] text{}') <(curl -s www.namazvakti.com | pup 'td[class=pTime] text{}')"
 alias nb=newsboat
 alias df=df -h
 alias free=free -m
@@ -27,3 +26,14 @@ function c() {
 }
 
 alias cd="c"
+
+alias nv="paste <(curl -s www.namazvakti.com | pup 'td[class=pText] text{}') <(curl -s www.namazvakti.com | pup 'td[class=pTime] text{}')"
+
+function nv_extended() {
+	html=$(curl -s www.namazvakti.com)
+
+	paste <(echo $html | pup '#myModal > div > table > tbody > tr > td:nth-child(1), #myModal > div > table > tbody > tr > td:nth-child(3) text{}') <(echo $html | pup '#myModal > div > table > tbody > tr > td:nth-child(2), #myModal > div > table > tbody > tr > td:nth-child(4) text{}') | column -s $'\t' -t
+
+}
+
+alias nve="nv_extended"
