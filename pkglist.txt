@@ -30,3 +30,4 @@ k9s
 dictd
 neomutt
 yarn
+translate-shell

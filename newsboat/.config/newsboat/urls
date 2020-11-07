@@ -17,6 +17,7 @@ https://mauilion.dev/posts/index.xml "~BLOG: Duffie Cooley" "Blog"
 https://www.hashicorp.com/resources/feed.xml "~NEWSFEED: HashiCorp Community Portal" "HashiCorp"
 https://www.linux.com/feeds/news/rss "~NEWSFEED: Linux.com" "Linux"
 https://www.linuxjournal.com/news/feed "~NEWSFEED: Linux Journal" "Linux"
+http://feeds.feedburner.com/HighScalability?format=xml "~NEWSFEED: High Scalability"
 
 # Medium
 https://medium.com/feed/usevim "~MEDIUM: usevim" "Vim"
