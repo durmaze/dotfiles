@@ -10,3 +10,4 @@ visual-studio-code-bin
 minikube
 istio-bin
 kubernetes-helm
+hostctl
