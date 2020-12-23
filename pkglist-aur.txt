@@ -11,3 +11,6 @@ minikube
 istio-bin
 kubernetes-helm
 hostctl
+jid
+fx
+gron
