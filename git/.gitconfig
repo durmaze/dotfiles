@@ -18,4 +18,4 @@
 [color]
 	ui = auto
 [credential]
-	helper = "!gopass-git-credentials $@"
+	helper = "!git-credential-gopass $@"
