@@ -12,6 +12,7 @@ vifm
 python-ueberzug
 htop
 gopass
+git-credential-gopass
 zathura
 zathura-pdf-mupdf
 newsboat
