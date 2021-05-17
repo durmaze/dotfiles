@@ -18,6 +18,7 @@ stow neomutt
 stow newsboat
 stow nitrogen
 stow ranger
+stow rofi
 stow rtv
 stow sxhkd
 stow sxiv
