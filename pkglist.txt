@@ -31,4 +31,3 @@ dictd
 neomutt
 yarn
 translate-shell
-rofi
