@@ -14,4 +14,3 @@ hostctl
 jid
 fx
 gron
-rofi
